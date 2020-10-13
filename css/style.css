@@ -33,18 +33,79 @@ main{
 div{
   /* width: 100%; */
   background-color: blue;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 /* colonna sinistra fissa */
 .colonna1{
   height: calc(100vh - 80px);
-  width: 150px;
+  width: 160px;
   flex-shrink: 0.5;
   position: fixed;
   left: 0;
   top: 0;
+  padding: 10px;
 }
+#logo{
+  width: 130px;
+  height: auto;
+  margin: 10px 0;
+}
+ul img{
+  width: 25px;
+  height: auto;
+}
+ul > li{
+  margin: 5px 0;
+  padding: 5px;
+}
+a, .alpha{
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+li:hover{
+  background-color: lightgrey;
+  border-radius: 5px;
+  border-left: 5px solid green;
+}
+.beta{
+  padding-left: 10px;
+  align-self: center;
+}
+.colonna1 h3{
+  padding-left: 5px;
+}
+.square{
+  position: relative;
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  margin: 10px 5px;
+}
+.square span{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+.garden{
+  align-self: center;
+}
+.playlist{
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+}
+.gamma{
+  position: absolute;
+  bottom: 10px;
+}
+.gamma img{
+  width: 20px;
+  height: auto;
+}
+
 
 
 /* colonna destra contenuto */
@@ -52,19 +113,22 @@ div{
   height: calc(100vh - 80px);
   width: 100%;
   flex-shrink: 1;
-  padding: 0px 0px 0px 150px;
+  padding: 0px 0px 0px 160px;
+    overflow-y: scroll;
 }
 #upgrade{
   position: fixed;
+  z-index: 100;
+  opacity: 0.5;
   height: 80px;
-  width: 100%;
+  width: calc(100% - 12px);
+  padding-right: 12px;
   /* debug */
- background-color: yellow;
+ /* background-color: yellow; */
   /* debug */
 }
 #matter{
   padding: 10px;
-  overflow-y: scroll;
   margin-top: 80px;
   /* debug */
   background-color: pink;
