@@ -9,3 +9,62 @@ body {
   width: 100%;
   height: 100vh;
 }
+main{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+/* regole scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: lightgrey;
+}
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* regole debug */
+div{
+  /* width: 100%; */
+  background-color: blue;
+  border: 1px solid black;
+}
+.colonna1{
+  height: calc(100vh - 80px);
+  width: 150px;
+  flex-shrink: 0.5;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.colonna2{
+  height: calc(100vh - 80px);
+  flex-basis: 100%;
+  flex-shrink: 1;
+  overflow-y: scroll;
+  padding: 10px 10px 10px 160px;
+}
+footer{
+  background-color: green;
+  height: 80px;
+  width: 100vw;
+  border: 1px solid black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+
+@media all and (max-width: 600px) {
+  .colonna1{
+    flex-basis: 120px;
+    flex-shrink: 1;
+  }
+
+}
