@@ -38,7 +38,7 @@ div{
 
 /* colonna sinistra fissa */
 .colonna1{
-  background-color: black;
+  background-color: #040404;
   height: calc(100vh - 80px);
   width: 180px;
   flex-shrink: 0.5;
@@ -78,12 +78,13 @@ li:hover{
 }
 .square{
   position: relative;
-  background-color: black;
+  background-color: white;
   width: 30px;
   height: 30px;
   margin: 10px 5px;
 }
 .square span{
+  color: black;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -129,7 +130,7 @@ li:hover{
 .logosmall{
   width: 30px;
   height: auto;
-  margin: 5px auto;
+  margin: 10px auto 0;
 }
 .gamma1{
   position: absolute;
@@ -142,25 +143,55 @@ li:hover{
   margin-top: 10px;
 }
 
+
+
 /* colonna destra contenuto */
 .colonna2{
   height: calc(100vh - 80px);
   width: 100%;
   flex-shrink: 1;
-  padding: 0px 0px 0px 135px;
+  padding: 0px 0px 0px 180px;
   overflow-y: scroll;
 }
 #upgrade{
   position: fixed;
   z-index: 100;
-  opacity: 0.5;
+  opacity: 0.92;
   height: 80px;
   width: calc(100% - 12px);
   padding-right: 12px;
-  /* debug */
- /* background-color: yellow; */
-  /* debug */
+  background-color: #090909;
 }
+.botton{
+  background-color: #00000000;
+  border: 2px solid white;
+  border-radius: 500px;
+  height: 50px;
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translate(-50% , -50%);
+}
+.botton > p{
+  color: white;
+  text-align: center;
+  line-height: 45px;
+}
+/* bottone che compare sotto i 320px */
+#bottonspec{
+  display: none;
+  background-image: url(../img/download.svg);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translate(-50% , -50%);
+}
+
+
+
 #matter{
   padding: 10px;
   margin-top: 80px;
@@ -178,6 +209,7 @@ footer{
   width: 100vw;
   border: 1px solid black;
   position: fixed;
+  z-index: 200;
   bottom: 0;
   left: 0;
 }
@@ -200,6 +232,9 @@ footer{
     padding: 0px 0px 0px 0px;
     height: calc(100vh - 60px);
   }
+  .botton{
+    right: 0;
+  }
   footer{
     height: 60px;
   }
@@ -213,7 +248,7 @@ footer{
     height: calc(100vh - 60px);
   }
   .colonna2{
-    padding: 0px 0px 0px 110px;
+    padding: 0px 0px 0px 150px;
     height: calc(100vh - 60px);
   }
   footer{
@@ -244,4 +279,24 @@ footer{
   footer{
 
   }
+}
+
+/* COLLASSO CONTENITORE GAMMA IN HEIGHT 350  */
+@media all and (max-height: 480px) {
+  .gamma{
+    display: none;
+  }
+  .gamma1{
+    display: none;
+  }
+}
+/* collasso bottone upgrade sotto i 320px */
+@media all and (max-width: 320px) {
+  .botton{
+    display: none;
+  }
+  #bottonspec{
+    display: block;
+  }
+
 }
