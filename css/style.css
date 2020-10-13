@@ -35,6 +35,8 @@ div{
   background-color: blue;
   border: 1px solid black;
 }
+
+/* colonna sinistra fissa */
 .colonna1{
   height: calc(100vh - 80px);
   width: 150px;
@@ -43,13 +45,35 @@ div{
   left: 0;
   top: 0;
 }
+
+
+/* colonna destra contenuto */
 .colonna2{
   height: calc(100vh - 80px);
-  flex-basis: 100%;
+  width: 100%;
   flex-shrink: 1;
-  overflow-y: scroll;
-  padding: 10px 10px 10px 160px;
+  padding: 0px 0px 0px 150px;
 }
+#upgrade{
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  /* debug */
+ background-color: yellow;
+  /* debug */
+}
+#matter{
+  padding: 10px;
+  overflow-y: scroll;
+  margin-top: 80px;
+  /* debug */
+  background-color: pink;
+  height: 100%;
+  /* debug */
+}
+
+
+/* player per musica fisso in basso */
 footer{
   background-color: green;
   height: 80px;
@@ -61,10 +85,61 @@ footer{
 }
 
 
-@media all and (max-width: 600px) {
-  .colonna1{
-    flex-basis: 120px;
-    flex-shrink: 1;
-  }
+/* ****** MEDIA QUERIES ****** */
 
+/* MOBILE */
+@media all and (max-width: 465px) {
+  .colonna1{
+    width: 60px;
+    flex-shrink: 1;
+    height: calc(100vh - 60px);
+  }
+  .colonna2{
+    padding: 0px 0px 0px 60px;
+    height: calc(100vh - 60px);
+  }
+  footer{
+    height: 60px;
+  }
+}
+
+/* TABLET */
+@media all and (min-width: 466px) and (max-width: 991px) {
+  .colonna1{
+    width: 120px;
+    flex-shrink: 1;
+    height: calc(100vh - 60px);
+  }
+  .colonna2{
+    padding: 0px 0px 0px 120px;
+    height: calc(100vh - 60px);
+  }
+  footer{
+    height: 60px;
+  }
+}
+/* PC SCREEN */
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  .colonna1{
+
+  }
+  .colonna2{
+
+  }
+  footer{
+
+  }
+}
+
+/* PC XL SCREEN */
+@media all and (min-width: 1200px) {
+  .colonna1{
+
+  }
+  .colonna2{
+
+  }
+  footer{
+
+  }
 }
