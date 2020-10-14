@@ -220,8 +220,9 @@ li:hover{
 /* player per musica fisso in basso */
 footer{
   /* debug */
-  background-color: green;
+  /* background-color: green; */
   /* debug */
+  background-color: #6A7DDC;
   height: 80px;
   width: 100vw;
   border: 1px solid black;
@@ -232,15 +233,22 @@ footer{
   display: flex;
   justify-content: space-between;
   padding: 10px 15px;
+  color: white;
 }
-
+footer img{
+  transition: 0.5s;
+}
+footer img:hover{
+  transform: scale(2);
+}
 /* debug */
-.foot1, .foot2, .foot3{
+/* .foot1, .foot2, .foot3{
   background-color: yellow;
   min-height: 60px;
-}
+} */
 /* debug */
 
+/* parte sinisra footer */
 .foot1{
   display: flex;
   flex-basis: 20%;
@@ -255,18 +263,23 @@ footer{
 #play > img{
   width: 50px;
   height: 50px;
+  transform: none;
 }
 .footicon{
-  margin-left: 20px;
+  margin-left: 10px;
+  /* display: flex; */
+  /* valutare se togliere flex */
 }
-.footicon > span{
+.footicon span{
   margin: 0 5px;
+  display: inline-block;
 }
 .footicon img{
   width: 15px;
   height: 15px;
 }
 
+/* parte centrale footer */
 .foot2{
   display: flex;
   flex-basis: 40%;
@@ -276,33 +289,89 @@ footer{
   flex-wrap: nowrap;
   flex-shrink: 2;
 }
-#playertop{
+.playertop{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   /* debug */
-  background-color: blue;
+  /* background-color: blue; */
   height: 50%;
   /* debug */
 }
-#playertop img{
+.playertop img{
+  width: 15px;
+  height: 15px;
+}
+
+/* id per bottone play */
+#circle{
   width: 20px;
   height: 20px;
 }
+.playertop span{
+  margin: 0 6px;
+}
 
+/* barra scorrimento canzone */
+.playerbot{
+  /* debug */
+  /* background-color: blue; */
+  /* debug */
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.barra{
+  position: relative;
+  background-color: white;
+  height: 5px;
+  width: 70%;
+  margin: 4px 8px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #FFFFFF inset, 0 1px 0 #444;
+}
+.barra span{
+  color: black;
+  position:absolute;
+  bottom: 50%;
+  line-height: 5px;
+  font-size: 30px;
+  display: none;
+}
+.barra:hover span{
+  display: block;
+}
 
-
-
-
-
+/* parte destra footer */
 .foot3{
   display: flex;
   flex-basis: 20%;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: nowrap;
   flex-shrink: 3;
+}
+.barra1{
+  position: relative;
+  background-color: white;
+  height: 5px;
+  width: 40px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #FFFFFF inset, 0 1px 0 #444;
+}
+.barra1 span{
+  color: black;
+  position:absolute;
+  bottom: 50%;
+  line-height: 4px;
+  font-size: 20px;
+  display: none;
+}
+.barra1:hover span{
+  display: block;
 }
 
 /* ****** MEDIA QUERIES ****** */
