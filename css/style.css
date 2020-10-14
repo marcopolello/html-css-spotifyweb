@@ -268,11 +268,12 @@ li:hover a:after {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-.row > .item{
+.row .item{
   flex-basis: 150px;
   flex-shrink: 2;
   margin: 5px 30px 5px 0;
   text-align: center;
+  position: relative;
   /* debug */
   /* background-color: green; */
   /* debug */
@@ -281,6 +282,52 @@ li:hover a:after {
   width: 100%;
   height: auto;
 }
+a h4, p{
+  color: white;
+}
+a p{
+  font-size: 12px;
+}
+/* tasto play a comparsa */
+.item:hover .playhover{
+  display: block;
+}
+.playhover{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.playhover > img{
+  width: 50px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+/* tasto play a comparsa */
+.item:hover .playhover1{
+  display: block;
+}
+.playhover1{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.playhover1 > img{
+  width: 50px;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
 
 /* player per musica fisso in basso */
 footer{
