@@ -213,15 +213,16 @@ div{
   color: white;
   padding: 10px;
   margin-top: 80px;
-  /* debug */
   background-color: #8D50B7;
-  height: 100%;
+  /* debug */
+  /* height: 100%; */
   /* debug */
 }
-#matter div{
+#matter > div{
+  margin: 10px 0;
   /* debug */
-  min-height: 50px;
-  background-color: blue;
+  /* min-height: 160px;
+  background-color: blue; */
   /* debug */
 }
 
@@ -237,6 +238,7 @@ nav > ul{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 nav li{
   list-style-type: none;
@@ -261,9 +263,24 @@ li:hover a:after {
 }
 
 /* prima riga copertine canzoni */
-
-
-
+.row{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.row > .item{
+  flex-basis: 150px;
+  flex-shrink: 2;
+  margin: 5px 30px 5px 0;
+  text-align: center;
+  /* debug */
+  /* background-color: green; */
+  /* debug */
+}
+.item img{
+  width: 100%;
+  height: auto;
+}
 
 /* player per musica fisso in basso */
 footer{
