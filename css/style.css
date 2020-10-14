@@ -51,19 +51,19 @@ div{
   height: auto;
   margin: 10px 0;
 }
-ul img{
+.colonna1 ul img{
   width: 25px;
   height: auto;
 }
-ul > li{
+.colonna1 ul > li{
   padding: 5px;
 }
-a, .alpha{
+.colonna1 a, .alpha{
   display: flex;
   text-decoration: none;
   color: white;
 }
-li:hover{
+.colonna1 li:hover{
   background-color: lightgrey;
   border-radius: 5px;
   border-left: 5px solid green;
@@ -148,7 +148,6 @@ li:hover{
 }
 
 
-
 /* colonna destra contenuto */
 .colonna2{
   height: calc(100vh - 80px);
@@ -156,6 +155,9 @@ li:hover{
   flex-shrink: 1;
   padding: 0px 0px 0px 180px;
   overflow-y: scroll;
+}
+.colonna2 a{
+  text-decoration: none;
 }
 #upgrade{
   position: fixed;
@@ -190,7 +192,7 @@ li:hover{
 }
 .botton p:hover{
   color:black;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 /* bottone che compare sotto i 320px */
 #bottonspec{
@@ -208,13 +210,59 @@ li:hover{
 
 /* sezione playlist e canzoni */
 #matter{
+  color: white;
   padding: 10px;
   margin-top: 80px;
   /* debug */
-  background-color: pink;
+  background-color: #8D50B7;
   height: 100%;
   /* debug */
 }
+#matter div{
+  /* debug */
+  min-height: 50px;
+  background-color: blue;
+  /* debug */
+}
+
+/* barra navigazione per playlist/artisti */
+nav{
+  margin: 10px 0;
+  /* debug */
+  /* min-height: 50px;
+  background-color: green; */
+  /* debug */
+}
+nav > ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav li{
+  list-style-type: none;
+  margin: 5px 10px;
+}
+
+/* linea che compare all'hover nella nav */
+nav a{
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+li:hover a:after {
+  content: "";
+  height: 1px;
+  width: 50%;
+  background-color: yellow;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* prima riga copertine canzoni */
+
+
 
 
 /* player per musica fisso in basso */
@@ -267,7 +315,7 @@ footer img:hover{
 }
 .footicon{
   margin-left: 10px;
-  /* display: flex; */
+  display: flex;
   /* valutare se togliere flex */
 }
 .footicon span{
@@ -355,6 +403,7 @@ footer img:hover{
   flex-shrink: 3;
 }
 .barra1{
+  align-self: center;
   position: relative;
   background-color: white;
   height: 5px;
